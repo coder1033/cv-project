@@ -71,13 +71,6 @@ class App extends React.Component {
 
     if (
       Object.keys(this.state.errors).filter((key) => {
-        console.log(
-          3,
-          this.state,
-          this.state.errors[key],
-          this.state.errors[key] === 1,
-          key
-        );
         return this.state.errors[key] === 1;
       }).length === 0
     ) {
@@ -93,16 +86,8 @@ class App extends React.Component {
   }
 
   changeView() {
-    console.log(2);
     if (
       Object.keys(this.state.errors).filter((key) => {
-        console.log(
-          3,
-          this.state,
-          this.state.errors[key],
-          this.state.errors[key] === 1,
-          key
-        );
         return this.state.errors[key] === 1;
       }).length === 0
     ) {
