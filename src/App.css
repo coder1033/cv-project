@@ -14,7 +14,6 @@
 }
 
 .App-header {
-  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,16 +26,16 @@
   color: #61dafb;
 }
 
-header{
+header {
   font-size: 3rem;
   border-bottom: 2px solid #fff;
   margin-bottom: 2rem;
 }
 
-@media(max-width:770px){
-  header{
+@media (max-width: 770px) {
+  header {
     font-size: 2rem;
     border-bottom: 2px solid #fff;
-    margin-bottom: 2rem;  
+    margin-bottom: 2rem;
   }
 }

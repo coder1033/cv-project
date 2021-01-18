@@ -1,90 +1,92 @@
-.overview{
-    line-height: 2em;
+.overview {
+  line-height: 2em;
+  letter-spacing: 2px;
+  margin: 3rem auto;
+  font-family: Arial, sans-serif;
+  opacity: 0.7;
+  color: gainsboro;
+  animation: move 2s ease 0s 1 normal forwards;
+}
+@keyframes move {
+  0% {
+    letter-spacing: 4px;
+  }
+  100% {
     letter-spacing: 2px;
-    margin: 3rem auto;
-    font-family:  Arial, sans-serif;
-    opacity: 0.7;
-    color:gainsboro;
-    animation: move 2s ease 0s 1 normal forwards;
+  }
 }
-@keyframes move{
-    0%{letter-spacing: 4px };
-    100%{letter-spacing: 2px };
+.overview > div {
+  width: 750px;
 }
-.overview > div{
-    width: 750px;
+.overview div {
+  margin-top: 1.5rem;
 }
-.overview div{
-    margin-top: 1.5rem;
+.overview div h1 {
+  margin-bottom: 2rem;
+  text-shadow: 0 0 4px #2e2828;
+  color: darkslategray;
 }
-.overview div h1{
+.overview div h2 {
+  font-size: 30px;
+}
+.overview div h3 {
+  font-size: medium;
+}
+.overview > div:first-child {
+  width: 650px;
+  text-align: center;
+  position: relative;
+  margin: auto;
+  margin-bottom: 3rem;
+}
+.overview > div:first-child h1 {
+  font-size: 55px;
+  margin: auto;
+}
+.overview > div:first-child h2 {
+  font-size: 23px;
+}
+
+button {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  font-size: large;
+  font-weight: bold;
+  padding: 10px;
+  margin: 6rem auto;
+  margin-top: 3rem;
+  border-radius: 15px;
+  border: none;
+  /* opacity: 0.5; */
+  box-shadow: 0 0 5px #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 770px) {
+  .overview {
+    letter-spacing: 1.5px;
+    padding: 20px;
+  }
+  .overview > div {
+    width: 100%;
+    margin: 30px;
+    display: inline;
+  }
+  .overview div h1 {
+    line-height: 1em;
     margin-bottom: 2rem;
     text-shadow: 0 0 4px #2e2828;
-    color:darkslategray;
-}
-.overview div h2{
-    font-size:30px;
-    /* font-weight: bolder; */
-}
-.overview div h3{
-    font-size: medium;
-}
-.overview > div:first-child{
-    width: 650px;
-    text-align: center;
-    position: relative;
-    margin:auto;
-    margin-bottom: 3rem;
-}
-.overview > div:first-child h1{
-    font-size: 55px;
-    margin:auto;
-}
-.overview > div:first-child h2{
+    color: darkslategray;
+    font-size: 30px;
+  }
+  .App-header {
+    min-height: none;
+  }
+  .overview div h2 {
     font-size: 23px;
-}
-
-
-button{
-    position: relative;
-    width: 100%;
-    margin: auto;
-    font-size: large;
-    font-weight: bold;
-    padding: 10px;
-    margin: 6rem auto;
-    margin-top:3rem;
-    border-radius: 15px;
-    border: none;
-    /* opacity: 0.5; */
-    box-shadow: 0 0 5px #fff;
-    cursor: pointer;
-}
-
-@media(max-width:770px){
-    .overview{
-        letter-spacing: 1.5px;
-        padding: 20px;
-    }
-    .overview > div{
-        width: 100%;
-        margin: 30px;
-        display: inline;
-    }
-    .overview div h1{
-        line-height: 1em;
-        margin-bottom: 2rem;
-        text-shadow: 0 0 4px #2e2828;
-        color:darkslategray;
-        font-size: 30px;
-    }
-    .App-header{
-        min-height: none;
-    }
-    .overview div h2{
-        font-size: 23px;
-    }
-    .overview div h3{
-        font-size: smaller;
-    }
+  }
+  .overview div h3 {
+    font-size: smaller;
+  }
 }

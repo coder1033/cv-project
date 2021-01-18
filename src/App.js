@@ -59,37 +59,59 @@ class App extends React.Component {
   onSubmit(e) {
     e.preventDefault();
     Object.keys(this.state.errors).forEach((key) => {
-      if(this.state.errors[key]===null) {
+      if (this.state.errors[key] === null) {
         this.setState((prevState) => ({
           errors: {
             ...prevState.errors,
             [key]: 1,
-          }
+          },
         }));
       }
     });
 
+    if (
+      Object.keys(this.state.errors).filter((key) => {
+        console.log(
+          3,
+          this.state,
+          this.state.errors[key],
+          this.state.errors[key] === 1,
+          key
+        );
+        return this.state.errors[key] === 1;
+      }).length === 0
+    ) {
+      this.setState({ to_show: "cv" });
+    } else {
+      this.setState({ to_show: "form" });
+    }
 
-    if (Object.keys(this.state.errors).filter((key) => {
-        console.log(3, this.state, this.state.errors[key], this.state.errors[key] === 1, key);
-        return this.state.errors[key] === 1;}).length === 0) {
-        this.setState({ to_show: "cv" })}
-    else{this.setState({to_show: "form"})}
-    
-    this.setState({to_show:"loading"});
-    setTimeout(()=>{this.changeView();},1000);
+    this.setState({ to_show: "loading" });
+    setTimeout(() => {
+      this.changeView();
+    }, 1000);
   }
 
-  changeView(){
+  changeView() {
     console.log(2);
-    if (Object.keys(this.state.errors).filter((key) => {
-        console.log(3, this.state, this.state.errors[key], this.state.errors[key] === 1, key);
-        return this.state.errors[key] === 1;}).length === 0) {
-        this.setState({ to_show: "cv" })}
-    else{this.setState({to_show: "form"})}
+    if (
+      Object.keys(this.state.errors).filter((key) => {
+        console.log(
+          3,
+          this.state,
+          this.state.errors[key],
+          this.state.errors[key] === 1,
+          key
+        );
+        return this.state.errors[key] === 1;
+      }).length === 0
+    ) {
+      this.setState({ to_show: "cv" });
+    } else {
+      this.setState({ to_show: "form" });
     }
-  
-  
+  }
+
   onEdit(e) {
     e.preventDefault();
 
@@ -107,16 +129,18 @@ class App extends React.Component {
           />
         </div>
       );
-    else if(this.state.to_show === "cv")
+    else if (this.state.to_show === "cv")
       return (
         <div className="App-header">
-          <Overview inputFields={this.state} onClick={this.onEdit}/>
+          <Overview inputFields={this.state} onClick={this.onEdit} />
         </div>
       );
     else
-    return (
-      <div className="App-header" style={{marginTop:"30px"}}>Loading...</div>
-    )
+      return (
+        <div className="App-header" style={{ marginTop: "30px" }}>
+          Loading...
+        </div>
+      );
   }
 }
 
